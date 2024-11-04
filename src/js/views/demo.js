@@ -10,34 +10,35 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
-			<ul className="list-group">
-				{store.demo.map((item, index) => {
-					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
-							{// Conditional render example
-							// Check to see if the background is orange, if so, display the message
-							item.background === "orange" ? (
-								<p style={{ color: item.initial }}>
-									Check store/flux.js scroll to the actions to see the code
-								</p>
-							) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
-						</li>
-					);
-				})}
-			</ul>
+			<h1 className="d-flex justify-content-center align-items-center">Add new conatct</h1>
+			<div class="mb-3">
+				<label for="nameUser" class="form-label">Full Name</label>
+				<input type="email" class="form-control" id="nameUser" aria-describedby="nameHelp" placeholder="Full Name"/>
+			</div>
+			<div class="mb-3">
+				<label for="Email" class="form-label">Email</label>
+				<input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter Email"/>
+			</div>
+			<div class="mb-3">
+				<label for="Phone" class="form-label">Phone</label>
+				<input type="email" class="form-control" id="Phone" aria-describedby="emailHelp" placeholder="Enter Phone"/>
+			</div>
+			<div class="mb-3">
+				<label for="address" class="form-label">Address</label>
+				<input type="email" class="form-control" id="address" aria-describedby="emailHelp" placeholder="Enter address" />
+			</div>
+
 			<br />
+			<div class="mb-3 align-items-center justify-content-center">
 			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
+				<button className="d-block p-2 btn btn-primary">Save</button>
 			</Link>
+			</div>
+			<div class="mb-3">
+			<Link to="/">
+				or get back to contacts
+			</Link>
+			</div>
 		</div>
 	);
 };

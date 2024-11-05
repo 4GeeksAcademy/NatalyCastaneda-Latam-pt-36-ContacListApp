@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
 
-export const Demo = () => {
+export const AddContact = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
@@ -31,7 +31,7 @@ export const Demo = () => {
 			<br />
 			<div class="mb-3 align-items-center justify-content-center">
 			<Link to="/">
-				<button className="d-block p-2 btn btn-primary">Save</button>
+				<button className="d-block p-2 btn btn-primary w-100">Save</button>
 			</Link>
 			</div>
 			<div class="mb-3">

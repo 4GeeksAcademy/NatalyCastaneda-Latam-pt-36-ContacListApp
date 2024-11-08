@@ -13,7 +13,7 @@ export const ContactCard = ({contact}) => (
             <p> <FontAwesomeIcon icon={faPhone} /> {contact.phone}</p>
             <p> <FontAwesomeIcon icon={faEnvelope} /> {contact.email}</p>
         </div>
-        <div className="nosequenombreponer">
+        <div className="icons">
             <span> <FontAwesomeIcon icon={faPencil} /> </span>
             <span> <FontAwesomeIcon icon={faTrash} /> </span>
         </div>

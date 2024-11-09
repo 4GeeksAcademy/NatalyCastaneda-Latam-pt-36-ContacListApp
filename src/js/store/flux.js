@@ -16,10 +16,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://playground.4geeks.com/contact/agendas/nath1710/contacts").then(response => response.json()).then(data => setStore({ "contacts": data.contacts }))
 
 			},
-			createContacts: () => {
-
-				fetch("https://playground.4geeks.com/contact/agendas/nath1710/contacts", { method: "POST" }).then(response => response.json()).then(data => setStore({ "contacts": data.contacts }))
-
+			createContacts: (newContact) => {
+				fetch("https://playground.4geeks.com/contact/agendas/nath1710/contacts", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify(newContact)
+				})
+					.then(response => response.json())
+					.then(data => setStore({ "contacts": data.contacts }));
 			},
 			updateContacts: (contactId) => {
 
@@ -31,7 +37,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://playground.4geeks.com/contact/agendas/nath1710/contacts/" + contactId, { method: "DELETE" }).then(response => response.json()).then(data => setStore({ "contacts": data.contacts }))
 
 			},
-			
+
 		}
 	};
 };

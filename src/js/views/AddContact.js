@@ -27,15 +27,15 @@ export const AddContact = () => {
 			</div>
 			<div class="mb-3">
 				<label for="Email" class="form-label">Email</label>
-				<input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter Email" />
+				<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter Email" />
 			</div>
 			<div class="mb-3">
 				<label for="Phone" class="form-label">Phone</label>
-				<input type="text" class="form-control" id="Phone" aria-describedby="emailHelp" placeholder="Enter Phone" />
+				<input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} class="form-control" id="Phone" aria-describedby="emailHelp" placeholder="Enter Phone" />
 			</div>
 			<div class="mb-3">
 				<label for="address" class="form-label">Address</label>
-				<input type="text" class="form-control" id="address" aria-describedby="emailHelp" placeholder="Enter address" />
+				<input type="text" value={address} onChange={(e) => setAddress(e.target.value)} class="form-control" id="address" aria-describedby="emailHelp" placeholder="Enter address" />
 			</div>
 
 			<br />
